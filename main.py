@@ -36,7 +36,6 @@ TYPE = {
 }
 
 
-# rootPath:str, destPath='' , delete:bool = False, type:bool = False
 @main.command(
     
     cls=HelpColorsCommand,
@@ -49,9 +48,8 @@ TYPE = {
 @click.option('--remove','-r',prompt='Delete files from src : ', type=click.Choice(DELETE.keys()))
 @click.option('--file','-f',prompt='organize by files : ', type=click.Choice(TYPE.keys()))
 def organize(src,dest,remove,file):
-    
-    # console.print(src,dest,delete,tipo)
-    
+
+
     # '/Users/disp_excript/Desktop/original/'
     # '/Users/disp_excript/Desktop/copia/'
     # '/Users/disp_excript/Desktop/organizado/'
